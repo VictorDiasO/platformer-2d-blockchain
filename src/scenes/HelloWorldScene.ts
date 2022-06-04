@@ -1,15 +1,17 @@
-import Phaser from 'phaser'
+import Phaser from 'phaser';
 
 export default class HelloWorldScene extends Phaser.Scene {
   constructor() {
-    super('helloworld')
+    super('helloworld');
   }
 
   preload() {
-    this.load.setBaseURL('https://labs.phaser.io')
+    this.load.setBaseURL('https://labs.phaser.io');
 
-    this.load.image('logo', 'assets/sprites/phaser3-logo.png')
-    this.load.image('red', 'assets/particles/red.png')
+    this.load.image('logo', 'assets/sprites/phaser3-logo.png');
+    this.load.image('red', 'assets/particles/red.png');
+    this.load.image('blue', 'assets/particles/blue.png');
+    this.load.image('ball', './assets/ball.png');
   }
 
   create() {
@@ -17,7 +19,7 @@ export default class HelloWorldScene extends Phaser.Scene {
   }
 
   createEmitter() {
-    const particles = this.add.particles('red')
+    const particles = this.add.particles('logo')
 
     const emitter = particles.createEmitter({
       speed: 100,
@@ -25,12 +27,14 @@ export default class HelloWorldScene extends Phaser.Scene {
       blendMode: 'ADD',
     })
 
-    const logo = this.physics.add.image(400, 100, 'logo')
+    const logo = this.physics.add.image(400, 100, 'logo');
+    // const logo = this.input.mouse.target
 
     logo.setVelocity(100, 200)
     logo.setBounce(1, 1)
     logo.setCollideWorldBounds(true)
 
+    emitter.visible = true;
     emitter.startFollow(logo)
   }
 }

@@ -37,11 +37,105 @@
   margin-top: 20px;
 }
 
+.Game-mechanics {
+  /* color: #5192ED; */
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  animation: Game-mechanics-3d 1.2s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite, move 1.2s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.Game-mechanics-text {
+  font-size: calc(10px + 1vmin);
+  margin-top: 20px;
+  font-family: 'Octo', 'Space Grotesk', 'ui-sans-serif', 'system-ui', 'Helvetica', 'sans-serif';
+  /* Octo,Space Grotesk,ui-sans-serif,system-ui,Helvetica,sans-serif */
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes Game-mechanics-3d {
+  0% {
+    text-shadow: none;
+  }
+
+  10% {
+    text-shadow: 3px 3px 0 #69A1F0;
+  }
+
+  20% {
+    text-shadow: 3px 3px 0 #69A1F0,
+      6px 6px 0 #7EAEF2;
+  }
+
+  30% {
+    text-shadow: 3px 3px 0 #69A1F0,
+      6px 6px 0 #7EAEF2, 9px 9px #90BAF5;
+  }
+
+  40% {
+    text-shadow: 3px 3px 0 #69A1F0,
+      6px 6px 0 #7EAEF2, 9px 9px #90BAF5,
+      12px 12px 0 #A2C4F5;
+  }
+
+  50% {
+    text-shadow: 3px 3px 0 #69A1F0,
+      6px 6px 0 #7EAEF2, 9px 9px #90BAF5,
+      12px 12px 0 #A2C4F5;
+  }
+
+  60% {
+    text-shadow: 3px 3px 0 #69A1F0,
+      6px 6px 0 #7EAEF2, 9px 9px #90BAF5,
+      12px 12px 0 #A2C4F5;
+  }
+
+  70% {
+    text-shadow: 3px 3px 0 #69A1F0,
+      6px 6px 0 #7EAEF2, 9px 9px #90BAF5;
+  }
+
+  80% {
+    text-shadow: 3px 3px 0 #69A1F0,
+      6px 6px 0 #7EAEF2;
+  }
+
+  90% {
+    text-shadow: 3px 3px 0 #69A1F0;
+  }
+
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  40% {
+    transform: translate(-12px, -12px);
+  }
+
+  50% {
+    transform: translate(-12px, -12px);
+  }
+
+  60% {
+    transform: translate(-12px, -12px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
   }
 }
