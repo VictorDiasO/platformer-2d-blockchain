@@ -8,6 +8,7 @@ var groundLayer, coinLayer;
 var text;
 var platforms;
 var invisiblePlatforms;
+var stars: Phaser.Physics.Arcade.Group;
 var mouse: Phaser.Physics.Arcade.StaticGroup;
 
 export default class Platformer extends Phaser.Scene {
@@ -91,6 +92,15 @@ export default class Platformer extends Phaser.Scene {
     this.physics.add.collider(player, [platforms, invisiblePlatforms, mouse]); // Colliders definitions
 
     cursors = this.input.keyboard.createCursorKeys();
+
+
+    // Stars
+    const star = this.physics.add.image(400, 100, 'star');
+    for (let i = 0; i < 0; i++) {
+      star.setBounce(1, 1);
+      star.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+    }
+    star.setCollideWorldBounds(true);
   }
 
   update() {

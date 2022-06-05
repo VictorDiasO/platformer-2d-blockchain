@@ -1,4 +1,4 @@
-# Phaser 3 + Create React App template
+# Phaser 3 + ReactJS + Blockchain Game Template
 ![image](https://user-images.githubusercontent.com/11501902/149049053-f46a9d1e-7075-4258-9102-cdbcbe7198ba.png)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -25,3 +25,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+
+Based on [https://github.com/kevinshen56714/create-react-phaser3-app](this template).
